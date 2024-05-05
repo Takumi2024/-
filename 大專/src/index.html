@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>全國運動場館</title>
+  <script src="https://unpkg.com/d3@5.6.0/dist/d3.min.js"></script>
+  <script src="https://unpkg.com/topojson@3.0.2/dist/topojson.js"></script>
+  <script src="/dist/augurio-taiwan.min.css"></script>
+  <script src="index.js" defer></script>
+  <link rel="stylesheet" href="/src/index.css">
+</head>
+<style>
+  body {
+    background: lightblue;
+  }
+
+  .county {
+    fill: #ebf0e4;
+    stroke: blue;
+    stroke-width: 0.4px;
+  }
+
+  .county:hover {
+    fill: lightgray;
+  }
+</style>
+
+<body>
+  <div class="title"></div>
+  <div class="news">
+    <h3>未來一周天氣預報</h3>
+    <div class="Ntext">文字敘述</div>
+  </div>
+  <div id="wrapper" style="position: relative; z-index: 1;">
+    <div class="XL-cloud">
+      <div class="cloud"></div>
+    </div>
+    <div class="L-cloud">
+      <div class="cloud"></div>
+    </div>
+    <div class="M-cloud">
+      <div class="cloud"></div>
+    </div>
+  </div>
+  <!-- <img src="/dist/COUNTY_MOI_1090820.json" alt=""> -->
+  <svg width="900" height="900" style="position: relative; z-index: 2;">
+    <use xlink:href=""></use>
+  </svg>
+  
+  <!-- <img src="/img/台灣特色ICON-台北101.svg" alt=""> -->
+
+</body>
+
+</html>

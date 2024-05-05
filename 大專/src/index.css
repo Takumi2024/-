@@ -1,0 +1,102 @@
+body{
+  background-color:#00b4ff;
+  overflow-x:hidden;
+  height:100vh;
+  margin:0;
+  padding:0;
+}
+
+/*雲的本體造型*/
+.cloud{
+  background:#fff;
+  width:160px;
+  border-radius:200px;
+  position:relative;
+  height:40px;
+  margin:30px 0 30px 0;
+}
+/*雲的造型*/
+.cloud:after {
+    content: "";
+    width: 80px;
+    height: 80px;
+    position: absolute;
+    background: #fff;
+    display: inline-block;
+    top: -40px;
+    right: 20px;
+    border-radius: 100%;
+}
+/*雲的造型*/
+.cloud:before {
+    content: "";
+    width: 60px;
+    height: 60px;
+    position: absolute;
+    background: #fff;
+    display: block;
+    top: -25px;
+    left: 20px;
+    border-radius: 100%;
+}
+/*不同大小的雲 不同大小的雲跑的速度不同*/
+.XL-cloud{
+  /* 設置雲朵放大 1.2 倍 */
+transform: scale(1.2);
+
+/* 設置雲朵浮動的動畫，持續時間 20 秒，延遲 4 秒後開始，使用線性動畫，並且無限循環 */
+animation: floating-cloud 20s 4s linear infinite;
+
+/* 在WebKit瀏覽器中設置雲朵浮動的動畫，與上面的動畫屬性相同 */
+-webkit-animation: floating-cloud 20s 4s linear infinite;
+
+/* 調整雲朵的上、右、下、左邊距，分別為 50px、0px、50px、0px */
+margin: 50px 0px 50px 0px;
+}
+
+.L-cloud{
+  animation: floating-cloud 26s 0.2s linear infinite;
+  -webkit-animation: floating-cloud 26s 0.2s linear infinite;
+  transform:scale(1.0);
+  margin:40px 0px 40px 0px;
+}
+ 
+.M-cloud{
+  animation: floating-cloud 16s 3s linear infinite;
+  -webkit-animation: floating-cloud 16s 3s linear infinite;
+  transform:scale(0.8);
+}
+#wrapper{
+  top: 300px;
+  right: -800px;
+}
+
+/*關鍵影格部分*/
+@keyframes floating-cloud {
+  0% {
+    margin-left: -600px; /* 水平位置向左偏移 */
+    top: 100px; /* 垂直位置上移 */
+  }
+  50% {
+    margin-left: 600px; /* 水平位置向右偏移 */
+    top: 50px; /* 垂直位置下移 */
+  }
+  100% {
+    margin-left: -600px; /* 水平位置向左偏移 */
+    top: 100px; /* 垂直位置上移 */
+  }
+}
+.title{
+  background-color: #fff;
+  height: 72px;
+}
+.news{
+  margin-right: 200px;
+  margin-top: 200px;
+  float: right;
+  width: 300px;
+  height: 300px;
+  border: 2px solid red;
+  border-radius: 20px;
+  z-index: 3;
+}
